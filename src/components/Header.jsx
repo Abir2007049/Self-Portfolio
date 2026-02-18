@@ -23,6 +23,14 @@ const Header = () => {
             <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-gray-900 transition">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-gray-900 transition">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900 transition">Contact</button>
+            <a
+              href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition"
+            >
+              Admin Panel
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -43,6 +51,14 @@ const Header = () => {
             <button onClick={() => scrollToSection('skills')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Contact</button>
+            <a
+              href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-left py-2 text-gray-600 hover:text-gray-900"
+            >
+              Admin Panel
+            </a>
           </div>
         )}
       </nav>

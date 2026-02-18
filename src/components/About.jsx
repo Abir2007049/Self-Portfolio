@@ -17,7 +17,9 @@ const About = () => {
           name: data.name || aboutData.name,
           title: data.title || aboutData.title,
           bio: data.bio || aboutData.bio,
-          profileImage: data.profileImage?.fields?.file?.url || aboutData.profileImage
+          profileImage: data.profileImage?.fields?.file?.url
+            ? `https:${data.profileImage.fields.file.url}`
+            : aboutData.profileImage
         });
       }
     };
