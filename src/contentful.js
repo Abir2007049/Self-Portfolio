@@ -48,6 +48,19 @@ export const getProjects = async () => {
   }
 };
 
+// Fetch all publications from Contentful
+export const getPublications = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: 'publications', // Create this content type in Contentful
+    });
+    return response.items.map(item => item.fields);
+  } catch (error) {
+    console.log('Contentful not configured or error fetching publications. Using default data.');
+    return [];
+  }
+};
+
 // Fetch about information from Contentful
 export const getAbout = async () => {
   try {

@@ -52,7 +52,9 @@ const Projects = () => {
           title: project.title,
           description: project.description,
           technologies: project.technologies || [],
-          image: project.image?.fields?.file?.url || `https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=${encodeURIComponent(project.title)}`,
+          image: project.image?.fields?.file?.url
+            ? `https:${project.image.fields.file.url}`
+            : `https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=${encodeURIComponent(project.title)}`,
           github: project.github || '#',
           demo: project.demo || project.github || '#'
         }));
@@ -63,29 +65,29 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-[#0b0b10]">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        <h2 className="text-4xl font-bold text-center text-white mb-12">
           My Projects
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+            <div key={project.id} className="bg-[#12121c] rounded-xl border border-violet-500/10 shadow-md overflow-hidden hover:border-violet-400/40 hover:shadow-xl transition">
               <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-300 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, idx) => (
-                    <span key={idx} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                    <span key={idx} className="bg-violet-500/15 text-violet-200 px-3 py-1 rounded-full text-sm border border-violet-400/20">
                       {tech}
                     </span>
                   ))}
@@ -93,7 +95,7 @@ const Projects = () => {
                 <div className="flex space-x-4">
                   <a 
                     href={project.github}
-                    className="text-gray-600 hover:text-gray-900 transition"
+                    className="text-slate-300 hover:text-violet-200 transition"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -103,7 +105,7 @@ const Projects = () => {
                   </a>
                   <a 
                     href={project.demo}
-                    className="text-blue-600 hover:text-blue-700 font-medium transition"
+                    className="text-violet-300 hover:text-violet-200 font-medium transition"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

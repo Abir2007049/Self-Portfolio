@@ -10,24 +10,25 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-black/70 border-b border-violet-500/20 backdrop-blur sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-gray-800">
+          <div className="text-2xl font-bold text-violet-100 tracking-wide">
             My Portfolio
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-gray-900 transition">About</button>
-            <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-gray-900 transition">Skills</button>
-            <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-gray-900 transition">Projects</button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900 transition">Contact</button>
+          <div className="hidden md:flex items-center space-x-6">
+            <button onClick={() => scrollToSection('about')} className="text-slate-200/80 hover:text-violet-200 transition">About</button>
+            <button onClick={() => scrollToSection('skills')} className="text-slate-200/80 hover:text-violet-200 transition">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="text-slate-200/80 hover:text-violet-200 transition">Projects</button>
+            <button onClick={() => scrollToSection('publications')} className="text-slate-200/80 hover:text-violet-200 transition">Publications</button>
+            <button onClick={() => scrollToSection('contact')} className="text-slate-200/80 hover:text-violet-200 transition">Contact</button>
             <a
               href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition"
+              className="px-3 py-1.5 rounded-md border border-violet-400/60 text-violet-200 hover:bg-violet-500/10 transition"
             >
               Admin Panel
             </a>
@@ -35,7 +36,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden text-slate-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,16 +47,17 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2">
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">About</button>
-            <button onClick={() => scrollToSection('skills')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Skills</button>
-            <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Projects</button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-gray-600 hover:text-gray-900">Contact</button>
+          <div className="md:hidden mt-4 space-y-2 rounded-lg border border-violet-500/10 bg-black/40 p-3">
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">About</button>
+            <button onClick={() => scrollToSection('skills')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Projects</button>
+            <button onClick={() => scrollToSection('publications')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Publications</button>
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Contact</button>
             <a
               href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-left py-2 text-gray-600 hover:text-gray-900"
+              className="block w-full text-left py-2 text-violet-200"
             >
               Admin Panel
             </a>
