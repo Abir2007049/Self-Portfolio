@@ -22,7 +22,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('about')} className="text-slate-200/80 hover:text-violet-200 transition">About</button>
             <button onClick={() => scrollToSection('skills')} className="text-slate-200/80 hover:text-violet-200 transition">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="text-slate-200/80 hover:text-violet-200 transition">Projects</button>
-            <button onClick={() => scrollToSection('publications')} className="text-slate-200/80 hover:text-violet-200 transition">Publications</button>
+            <button onClick={() => scrollToSection('publications')} className="text-slate-200/80 hover:text-violet-200 transition">Publications & Achievements</button>
             <button onClick={() => scrollToSection('contact')} className="text-slate-200/80 hover:text-violet-200 transition">Contact</button>
             <a
               href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
@@ -51,7 +51,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">About</button>
             <button onClick={() => scrollToSection('skills')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Skills</button>
             <button onClick={() => scrollToSection('projects')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Projects</button>
-            <button onClick={() => scrollToSection('publications')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Publications</button>
+            <button onClick={() => scrollToSection('publications')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Publications & Achievements</button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-slate-200/80 hover:text-violet-200">Contact</button>
             <a
               href="https://app.contentful.com/spaces/tqeqfmqv1sng/views/entries"
